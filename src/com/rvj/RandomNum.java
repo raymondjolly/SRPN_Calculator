@@ -8,6 +8,7 @@ package com.rvj;
  */
 public class RandomNum {
 
+    //this helped me: https://www.baeldung.com/java-generate-random-long-float-integer-double
     public long rand() {
         long leftLimit = 4000000000L;
         long rightLimit = -4000000001L;
