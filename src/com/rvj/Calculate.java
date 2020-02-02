@@ -124,7 +124,7 @@ public class Calculate {
         try{
             firstNumber = pop();
             secondNumber = pop();
-            if(firstNumber ==0){
+            if(firstNumber==0){
                 //Note that this is in the use case and not my intention
                 //the exception would be able to handle this
                 System.err.println("31 Floating point exception(core dumped");
@@ -245,9 +245,14 @@ public class Calculate {
      * @param result long int
      */
     private void rangeCheck(long result){
-        if(result>2147483647L) {
+        if(result>=2147483647L) {
             push(2147483647L);
-        } else push(Math.max(result, -2147483648L));
+        } else if(result<= -2147483648L){
+            push(- 2147483648);
+        } else {
+            push(result);
+        }
+
     }
 
     /***

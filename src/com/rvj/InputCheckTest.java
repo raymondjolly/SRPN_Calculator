@@ -1,12 +1,10 @@
 package com.rvj;
 
-import org.junit.Before;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import javax.print.DocFlavor;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,7 +14,7 @@ class InputCheckTest {
 
     @BeforeAll
     static void beforeAllInit(){
-        System.out.println("Starting calculation tests");
+        System.out.println("Starting Input tests");
     }
 
     @BeforeEach
@@ -47,7 +45,4 @@ class InputCheckTest {
         assertEquals(1, test);
     }
 
-    @Test
-    void commentFlag() {
-    }
 }
