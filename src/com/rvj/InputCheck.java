@@ -2,7 +2,6 @@ package com.rvj;
 
 public class InputCheck {
 
-    int commentSkip;
 
     public InputCheck() {
     }
@@ -25,15 +24,20 @@ public class InputCheck {
         return count;
     }
 
-    public int commmentFlag(String string, int index){
+
+    public int commentFlag(String string, int index){
+        int commentSkip=0;
         int i;
         for(i = index; i<string.length(); i++){
             if(string.charAt(i)=='#'){
-                commentSkip+=1;
+                commentSkip = string.length();
+                break;
             } else if(i==string.length()-1){
                 System.out.printf("Unrecognized operator or operand %c\n", '#');
+                commentSkip=0;
             }
         }
         return commentSkip;
     }
+
 }

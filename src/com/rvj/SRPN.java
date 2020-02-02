@@ -67,8 +67,8 @@ public class SRPN {
                  } else if (entry.charAt(counter)==Operators.displayStack){
                      calculate.display();
                  } else if (entry.charAt(counter)== Operators.commenter){
-                     counter+=inputCheck.commmentFlag(entry, counter);
-                 } else if (entry.charAt(counter)== Operators.spacer){
+                     counter+=inputCheck.commentFlag(entry,counter);
+                 } else if (entry.charAt(counter)!= Operators.spacer){
                      System.out.printf("Unrecognized operator or operand %c\n", entry.charAt(counter));
                  }
              }
