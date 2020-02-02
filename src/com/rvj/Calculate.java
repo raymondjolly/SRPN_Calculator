@@ -6,6 +6,17 @@ import java.util.Stack;
 /***
  * Calculate is an object that will add valid numbers to a native stack in the Java
  * library and provides methods to conduct mathematical operations.
+ *
+ * A key comment about how I implemented the stack. My stack uses long integer for several
+ * reasons. First and foremost its safe to use a signed integer that goes beyond the range
+ * of an int primitive.  When using a primitive int adding two very large numbers can potentially
+ * produce a very small primitive int which in many applications can be a security concern. Also,
+ * it makes it much easier to return the Integer.MIN_VALUE and Integer.MAX_VALUE in the desired use
+ * cases.
+ *
+ * Finally,I implemented the stack the comes natively in the Java library (why invent the wheel?). Again,
+ * there are several reasons why I chose to do this. I few reasons again is because its safer,
+ * one can use concurrency features in the language it needed, and it reduces code bloat.
  */
 public class Calculate {
     private long firstNumber;
