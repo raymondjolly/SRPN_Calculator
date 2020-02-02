@@ -36,7 +36,7 @@ public class Calculate {
     /***
      * Add pops the top 2 integers from the stack, validates if the result
      * is within the Integer.MIN_VALUE and Integer.MAX_VALUE and produces the sum
-     * and pused it to the stack.
+     * and pushed it to the stack.
      * If the result is less than -2147483648L, -2147483648L will be returned.
      * If the result exceeds 2147483647, then the value of 2147483647 is returned.
      */
