@@ -4,7 +4,7 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
 /***
- * Calculate is an object that will add valid numbers to a native stack in the Java
+ * Calculate is a class that will add valid numbers to a native stack in the Java
  * library and provides methods to conduct mathematical operations.
  *
  * A key comment about how I implemented the stack. My stack uses long integer for several

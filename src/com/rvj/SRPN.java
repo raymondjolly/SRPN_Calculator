@@ -3,7 +3,7 @@ package com.rvj;
 import java.util.Scanner;
 
 /***
- * SRPN is an object with one method to parse through user input.
+ * SRPN is a class with one method to parse through user input.
  */
 public class SRPN {
     Calculate calculate = new Calculate();
