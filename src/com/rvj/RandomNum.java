@@ -10,8 +10,8 @@ public class RandomNum {
 
     //this helped me: https://www.baeldung.com/java-generate-random-long-float-integer-double
     public long rand() {
-        long leftLimit = 4000000000L;
-        long rightLimit = -4000000001L;
+        long leftLimit = 2500000000L;
+        long rightLimit = -2500000001L;
         return leftLimit + (long) (Math.random() * (rightLimit - leftLimit));
 
     }
