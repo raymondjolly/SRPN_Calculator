@@ -44,5 +44,4 @@ class InputCheckTest {
         test = inputCheck.digitCount(1);
         assertEquals(1, test);
     }
-
 }

@@ -44,7 +44,8 @@ public class SRPN {
                          calculate.push(nextNumber);
                          counter+=inputCheck.digitCount((int) nextNumber);
                      }
-                     //with RPN the operator comes last to compensate
+                     //with RPN the operator comes last to compensate. Otherwise,
+                     //error is thrown.
                  }catch (StringIndexOutOfBoundsException e){
                      calculate.subtract();
                  }
@@ -61,11 +62,14 @@ public class SRPN {
                  }   catch (StringIndexOutOfBoundsException e){
                      calculate.push(0);
                  }
-             }  else if (inputCheck.isInt(entry.charAt(counter))) {
+             }//Check numbers
+             else if (inputCheck.isInt(entry.charAt(counter))) {
                  nextNumber = scanner.nextInt();
                  calculate.push(nextNumber);
                  counter += inputCheck.digitCount((int) nextNumber) - 1;
-             } else {
+             } else
+                 //Now do through the operations
+                 {
                  if(entry.charAt(counter)== Operators.add){
                      calculate.add();
                  } else if(entry.charAt(counter)==Operators.subtract){
@@ -86,7 +90,8 @@ public class SRPN {
                      calculate.display();
                  } else if (entry.charAt(counter)== Operators.commenter){
                      counter+=inputCheck.commentFlag(entry,counter);
-                 } else if (entry.charAt(counter)!= Operators.spacer){
+                 } //must come last
+                 else if (entry.charAt(counter)!= Operators.spacer){
                      System.out.printf("Unrecognized operator or operand %c\n", entry.charAt(counter));
                  }
              }
